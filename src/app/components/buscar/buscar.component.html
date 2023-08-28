@@ -1,0 +1,24 @@
+<div class="container mt-5">
+  <h1>Heroes <small>Marvel y DC</small></h1>
+  <hr />
+</div>
+
+<div class="row animated fadeIn" *ngIf="heroes.length == 0">
+  <div class="col-md-12">
+    <div class="alert alert-danger" role="alert">
+      No existen resultados con el término: {{ termino }}
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div
+    class="col-md-4 animated fadeIn"
+    *ngFor="let heroe of heroes; let idx = index"
+  >
+    <app-tarjeta-heroe
+      [heroe]="heroe"
+      [index]="heroe.idx"
+    ></app-tarjeta-heroe>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<img class="card-img-top" [src]="heroe.img" alt="Card image cap" />
+<div class="card-body">
+  <h5 class="card-title">{{ heroe.nombre }}</h5>
+  <p class="card-text">
+    {{ heroe.bio | slice : 0 : 120 }}
+  </p>
+  <p class="card-text">
+    <small class="text-muted">{{ heroe.casa }}, {{ heroe.aparicion }}</small>
+  </p>
+  <input
+    (click)="verHeroe()"
+    type="button"
+    value="Ver mas"
+    class="btn btn-outline-success w-100 mb-5"
+  />
+</div>
